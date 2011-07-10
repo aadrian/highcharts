@@ -1103,7 +1103,7 @@ $data = array(
 $min = round($_GET['min']/1000);
 $max = round($_GET['max']/1000);
 
-// build a twodimensional array of data items between min and max
+// build a two-dimensional array of data items between min and max
 $newData = array();
 foreach ($data as $key => $value) {
 	if ($key > $min && $key < $max) {

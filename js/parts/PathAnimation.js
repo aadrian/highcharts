@@ -18,7 +18,7 @@ pathAnim = {
 			end = [].concat(toD), // copy
 			startBaseLine,
 			endBaseLine,
-			sixify = function(arr) { // in splines make move points have six parameters like bezier curves
+			sixify = function(arr) { // in splines make move points have six parameters like Bezier curves
 				i = arr.length;
 				while (i--) {
 					if (arr[i] === M) {

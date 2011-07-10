@@ -37,7 +37,7 @@ SVGElement.prototype = {
 	/**
 	 * Set or get a given attribute
 	 * @param {Object|String} hash
-	 * @param {Mixed|Undefined} val
+	 * @param {Mixed|undefined} val
 	 */
 	attr: function(hash, val) {
 		var key, 
@@ -248,7 +248,7 @@ SVGElement.prototype = {
 	
 	/**
 	 * Apply a clipping path to this object
-	 * @param {String} id
+	 * @param {String} clipRect
 	 */
 	clip: function(clipRect) {
 		return this.attr('clip-path', 'url('+ this.renderer.url +'#'+ clipRect.id +')');
@@ -444,7 +444,7 @@ SVGElement.prototype = {
 		if (!alignOptions) { // called on resize
 			alignOptions = elemWrapper.alignOptions;
 			alignByTranslate = elemWrapper.alignByTranslate;
-		} else { // first call on instanciate
+		} else { // first call on instantiate
 			elemWrapper.alignOptions = alignOptions;
 			elemWrapper.alignByTranslate = alignByTranslate;
 			if (!box) { // boxes other than renderer handle this internally
@@ -543,7 +543,7 @@ SVGElement.prototype = {
 	
 	/**
 	 * Add the element
-	 * @param {Object|Undefined} parent Can be an element, an element wrapper or undefined
+	 * @param {Object|undefined} parent Can be an element, an element wrapper or undefined
 	 *    to append the element to the renderer.box.
 	 */ 
 	add: function(parent) {
@@ -748,7 +748,7 @@ SVGRenderer.prototype = {
 	/** 
 	 * Parse a simple HTML string into SVG tspans
 	 * 
-	 * @param {Object} textNode The parent text SVG node
+	 * @param {Object} wrapper The wrapper containing the parent text SVG node
 	 */
 	buildText: function(wrapper) {
 		var textNode = wrapper.element,
@@ -836,8 +836,8 @@ SVGRenderer.prototype = {
 								css(tspan, { display: 'block' });
 							}
 							
-							// Webkit and opera sometimes return 'normal' as the line height. In that
-							// case, webkit uses offsetHeight, while Opera falls back to 18
+							// WebKit and opera sometimes return 'normal' as the line height. In that
+							// case, WebKit uses offsetHeight, while Opera falls back to 18
 							lineHeight = win[GET_COMPUTED_STYLE] &&
 								pInt(win[GET_COMPUTED_STYLE](lastLine, null).getPropertyValue('line-height'));
 							
@@ -1069,7 +1069,7 @@ SVGRenderer.prototype = {
 				'href', src);
 		} else {
 			// could be exporting in IE
-			// using href throws "not supported" in ie7 and under, requries regex shim to fix later
+			// using href throws "not supported" in ie7 and under, requires regex shim to fix later
 			elemWrapper.element.setAttribute('hc-svg-href', src);
 		}
 			
@@ -1248,7 +1248,6 @@ SVGRenderer.prototype = {
 	
 	/**
 	 * Define a clipping rectangle
-	 * @param {String} id
 	 * @param {Number} x
 	 * @param {Number} y
 	 * @param {Number} width

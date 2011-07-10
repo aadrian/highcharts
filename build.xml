@@ -145,7 +145,7 @@
 
     <target name="test-all" description="Runs the unit tests on all adapters. The server must be running (i.e. 'server').">
         <!-- Param "testrun.name" used in echo output and to build a folder name where test result goes. -->
-        <!-- Param "required.lib" specifies wich third-party lib is used while testing. -->
+        <!-- Param "required.lib" specifies which third-party lib is used while testing. -->
         <!-- Param "required.adapter" specifies the corresponding adapter that matches the lib. Leave unset for the built-in jquery support. -->
 
         <!-- jquery versions -->

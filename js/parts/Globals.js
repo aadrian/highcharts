@@ -48,7 +48,7 @@ var doc = document,
 	M = 'M',
 	L = 'L',
 	/*
-	 * Empirical lowest possible opacities for TRACKER_FILL
+	 * Empirical lowest possible opacity for TRACKER_FILL
 	 * IE6: 0.002
 	 * IE7: 0.002
 	 * IE8: 0.002

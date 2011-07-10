@@ -17,7 +17,7 @@
 /*jslint forin: true */
 /*global Effect, Class, Highcharts, Event, $, $A */
 
-// Adapter interface between prototype and the Highcarts charting library
+// Adapter interface between prototype and the Highcharts charting library
 var HighchartsAdapter = (function() {
 
 var hasEffect = typeof Effect != 'undefined';
@@ -122,7 +122,7 @@ return {
 		}
 	},
 	
-	// this only occurs in higcharts 2.0+
+	// this only occurs in highcharts 2.0+
 	stop: function(el){
 		if (el._highcharts_extended && el._highchart_animation) {
 			el._highchart_animation.cancel();

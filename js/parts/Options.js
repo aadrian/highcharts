@@ -52,7 +52,7 @@ function getOptions() {
 
 /**
  * Discard an element by moving it to the bin and delete
- * @param {Object} The HTML node to discard
+ * @param {Object} element The HTML node to discard
  */
 function discardElement(element) {
 	// create a garbage bin element, not part of the DOM

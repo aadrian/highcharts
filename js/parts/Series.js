@@ -43,7 +43,7 @@ Point.prototype = {
 	
 		point.config = options;
 		
-		// onedimensional array input
+		// one-dimensional array input
 		if (isNumber(options) || options === null) {
 			point.y = options;	
 		}
@@ -62,7 +62,7 @@ Point.prototype = {
 			point.y = options[1];
 		}
 		
-		// two-dimentional array
+		// two-dimensional array
 		else if (isNumber(options[0])) {
 			point.x = options[0];
 			point.y = options[1];
@@ -393,8 +393,6 @@ Point.prototype = {
 
 /**
  * The base function which all other series types inherit from
- * @param {Object} chart
- * @param {Object} options
  */
 var Series = function() {};
 
@@ -409,6 +407,10 @@ Series.prototype = {
 		fill: 'fillColor',
 		r: 'radius'
 	},
+    /**
+     * @param {Object} chart
+     * @param {Object} options
+     */
 	init: function(chart, options) {
 		var series = this,
 			eventType,
@@ -767,7 +769,7 @@ Series.prototype = {
 		}
 	},
 	/**
-	 * Memoize tooltip texts and positions
+	 * Memorize tooltip texts and positions
 	 */
 	setTooltipPoints: function (renew) {
 		var series = this,
@@ -784,7 +786,7 @@ Series.prototype = {
 			series.tooltipPoints = null;
 		}
 			
-		// concat segments to overcome null values
+		// concatenate segments to overcome null values
 		each(series.segments, function(segment){
 			data = data.concat(segment);
 		});
@@ -1048,7 +1050,7 @@ Series.prototype = {
 		
 		
 		// Generate the point-specific attribute collections if specific point
-		// options are given. If not, create a referance to the series wide point 
+		// options are given. If not, create a reference to the series wide point
 		// attributes
 		i = data.length;
 		while (i--) {

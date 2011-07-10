@@ -617,7 +617,7 @@ function Chart (options, callback) {
 		
 		StackItem.prototype = {
 			/**
-			 * Sets the total of this stack. Should be called when a serie is hidden or shown
+			 * Sets the total of this stack. Should be called when a series is hidden or shown
 			 * since that will affect the total of other stacks.
 			 */
 			setTotal: function(total) {
@@ -632,7 +632,7 @@ function Chart (options, callback) {
 				var stackItem = this,									// aliased this
 					str = stackItem.options.formatter.call(stackItem);	// format the text in the label
 
-				// Change the text to reflect the new total and set visibility to hidden in case the serie is hidden
+				// Change the text to reflect the new total and set visibility to hidden in case the series is hidden
 				if (stackItem.label) {
 					stackItem.label.attr({text: str, visibility: HIDDEN});
 				// Create new label
@@ -870,7 +870,7 @@ function Chart (options, callback) {
 		 * this axis, across the plot to the opposite side
 		 * @param {Number} value
 		 * @param {Number} lineWidth Used for calculation crisp line
-		 * @param {Number] old Use old coordinates (for resizing and rescaling)
+		 * @param {Number} old Use old coordinates (for resizing and rescaling)
 		 */
 		getPlotLinePath = function(value, lineWidth, old) {
 			var x1, 

@@ -55,7 +55,7 @@ function lin2log(num) {
 }
 
 /**
- * Remove last occurence of an item from an array
+ * Remove last occurrence of an item from an array
  * @param {Array} arr
  * @param {Mixed} item
  */
@@ -157,7 +157,7 @@ function css (el, styles) {
 /* *
  * Get CSS value on a given element
  * @param {Object} el DOM object
- * @param {String} styleProp Camel cased CSS propery
+ * @param {String} styleProp Camel cased CSS property
  * /
 function getStyle (el, styleProp) {
 	var ret,
@@ -332,7 +332,7 @@ function getPosition (el) {
 }
 
 /**
- * Helper class that contains variuos counters that are local to the chart.
+ * Helper class that contains various counters that are local to the chart.
  */
 function ChartCounters() {
 	this.color = 0;

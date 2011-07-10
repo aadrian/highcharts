@@ -193,7 +193,7 @@ var PieSeries = extendClass(Series, {
 				length;
 		});
 		
-		// utility for getting the x value from a given y, used for anticollision logic in data labels
+		// utility for getting the x value from a given y, used for anti-collision logic in data labels
 		series.getX = function(y, left) {
 			
 			angle = math.asin((y - positions[1]) / (positions[2] / 2 + labelDistance));
@@ -330,7 +330,7 @@ var PieSeries = extendClass(Series, {
 					.add();
 			}
 			
-			// if the point is sliced, use special translation, else use plot area traslation
+			// if the point is sliced, use special translation, else use plot area translation
 			groupTranslation = point.sliced ? point.slicedTranslation : [chart.plotLeft, chart.plotTop];
 			group.translate(groupTranslation[0], groupTranslation[1]);
 			if (shadowGroup) {
@@ -532,7 +532,7 @@ var PieSeries = extendClass(Series, {
 				visibility = point.visible === false ? HIDDEN : VISIBLE;
 				slotIndex = slot.i;
 
-				// if the slot next to currrent slot is free, the y value is allowed 
+				// if the slot next to current slot is free, the y value is allowed
 				// to fall back to the natural position
 				y = slot.y;
 				if ((naturalY > y && slots[slotIndex + 1] !== null) ||
